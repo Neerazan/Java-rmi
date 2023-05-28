@@ -4,13 +4,13 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
 public class CalculatorClient {
-    public static void main(String args[]){
-        int a = 6 , b = 8;
+    public static void main(String args[]) {
+        int a = 6, b = 8;
 
         try {
-            Calculator stub = (Calculator) Naming.lookup("rmi://localhost:8099/calculator");
+            Calculator stub = (Calculator) Naming.lookup("rmi://localhost:1099/calculator");
 
-            System.out.println("a + b = " + stub.add(a,b));
+            System.out.println("a + b = " + stub.add(a, b));
         } catch (NotBoundException e) {
             throw new RuntimeException(e);
         } catch (MalformedURLException e) {
