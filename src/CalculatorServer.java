@@ -7,7 +7,7 @@ import java.rmi.registry.Registry;
 public class CalculatorServer {
     public static void main(String args[]) throws RemoteException, MalformedURLException {
         try{
-            LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
+//            LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
             Calculator stub = new CalculatorImplement();
 
             Naming.rebind("rmi://localhost:1099/calculator", stub);
