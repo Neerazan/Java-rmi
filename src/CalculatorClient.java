@@ -11,6 +11,9 @@ public class CalculatorClient {
             Calculator stub = (Calculator) Naming.lookup("rmi://localhost:1099/calculator");
 
             System.out.println("a + b = " + stub.add(a, b));
+            System.out.println("a * b = " + stub.mul(a, b));
+            System.out.println("a / b = " + stub.div(a, b));
+            System.out.println("a - b = " + stub.sub(a, b));
         } catch (NotBoundException e) {
             throw new RuntimeException(e);
         } catch (MalformedURLException e) {

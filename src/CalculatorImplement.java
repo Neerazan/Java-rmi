@@ -10,4 +10,16 @@ public class CalculatorImplement extends UnicastRemoteObject implements Calculat
     public int add(int a, int b) throws RemoteException {
         return a + b;
     }
+    @Override
+    public int mul(int a, int b) throws RemoteException {
+        return a * b;
+    }
+    @Override
+    public int sub(int a, int b) throws RemoteException {
+        return a - b;
+    }
+    @Override
+    public int div(int a, int b) throws RemoteException {
+        return a / b;
+    }
 }
